@@ -1,0 +1,6 @@
+Janus version: 1203 (1.2.3)
+Janus commit: not-a-git-repo
+Compiled on:  Tue Jan  1 00:00:00 UTC 1980
+
+Failed to load plugins/janus.plugin.streaming.jcfg.ini, trying the INI instead...
+Error reading configuration from /nix/store/61xf7hqkj2i6cx1napqniwd5lq63rz53-janus-gateway-1.2.3/etc/janus/janus.cfg

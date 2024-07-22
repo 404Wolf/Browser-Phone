@@ -6,15 +6,13 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
   };
 
-  outputs =
-    {
-      self,
-      nixpkgs,
-      flake-utils,
-    }:
+  outputs = {
+    self,
+    nixpkgs,
+    flake-utils,
+  }:
     flake-utils.lib.eachDefaultSystem (
-      system:
-      let
+      system: let
         pkgs = import nixpkgs {
           inherit system;
           config = {
@@ -22,20 +20,41 @@
             android_sdk.accept_license = true;
           };
         };
-      in
-      {
+      in {
         packages = {
-          default = pkgs.callPackage ./src/backend { };
+          android = pkgs.callPackage ./src/android {inherit pkgs;};
+          server = pkgs.callPackage ./server.nix {inherit pkgs;};
         };
-        devShells = {
-          browser = pkgs.mkShell { packages = [ pkgs.bun ]; };
-          backend = pkgs.mkShell {
-            packages = [
+        devShells.default = pkgs.mkShell {
+          packages =
+            [
               pkgs.bun
               pkgs.janus-gateway
-              pkgs.ffpmeg
-            ];
-          };
+              pkgs.ffmpeg
+            ]
+            ++ (with pkgs; [
+              glib
+              libconfig
+              libnice
+              jansson
+              boringssl
+              zlib
+              srtp
+              libuv
+              libmicrohttpd
+              curl
+              (libwebsockets.overrideAttrs (_: {
+                configureFlags = [
+                  "-DLWS_MAX_SMP=1"
+                  "-DLWS_WITHOUT_EXTENSIONS=0"
+                ];
+              }))
+              sofia_sip
+              libogg
+              libopus
+              usrsctp
+              ffmpeg
+            ]);
         };
       }
     );

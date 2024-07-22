@@ -1,3 +1,5 @@
 import Android from "./android"
 
-await Android.runEmulator()
+const emulator = await Android.buildEmulator()
+console.log(emulator)
+

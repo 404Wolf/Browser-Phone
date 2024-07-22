@@ -1,4 +1,4 @@
-$run_test_emulator > emulator_logs & disown;
+$run_test_emulator > /dev/null & disown;
 
 while true; do
   # Run adb devices and capture its output
