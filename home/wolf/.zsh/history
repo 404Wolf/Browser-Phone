@@ -1,3 +1,11 @@
-: 1721672371:0;cd src/browser
-: 1721673308:0;cd backend
-: 1721673312:0;cd src/backend
+cd browser
+ls
+cd src/browser
+gp
+gp --set-upstream origin main
+: 1721836070:0;clear
+: 1721836070:0;ls
+: 1721836078:7;yy
+: 1721836088:0;tmns browser
+: 1721836094:0;clear
+: 1721836096:0;gaa
