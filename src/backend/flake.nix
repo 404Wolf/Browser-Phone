@@ -28,9 +28,10 @@
         devShells.default = pkgs.mkShell {
           packages =
             [
+              pkgs.libvpx
               pkgs.bun
               pkgs.janus-gateway
-              pkgs.ffmpeg
+              pkgs.ffmpeg_7-full
             ]
             ++ (with pkgs; [
               glib
@@ -53,7 +54,6 @@
               libogg
               libopus
               usrsctp
-              ffmpeg
             ]);
         };
       }

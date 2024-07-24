@@ -1,5 +1,0 @@
-: 1721764814:0;clear
-: 1721764827:0;bash backend/src/janus/launch-janus.sh
-: 1721764829:0;cd backend
-: 1721836138:0;cd src
-: 1721836139:0;cd backend

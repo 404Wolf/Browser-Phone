@@ -1,0 +1,16 @@
+rtp-sample: {
+  enable = true
+	type = "rtp"
+	id = 1
+	description = "Opus/VP8 live stream coming from external source"
+	metadata = "You can use this metadata section to put any info you want!"
+	audio = true
+	video = true
+	audioport = 5002
+	audiopt = 111
+	audiocodec = "opus"
+	videoport = 5004
+	videopt = 100
+	videocodec = "vp8"
+	secret = "secret"
+}
