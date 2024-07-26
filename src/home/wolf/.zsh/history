@@ -1,0 +1,7 @@
+: 1721924067:0;scrycpy
+: 1721924072:0;scrcpy
+: 1721924074:0;cd backend
+: 1721924383:0;nix run .#janus
+: 1721924385:0;cd backend
+: 1721926341:0;scrcpy
+: 1721926342:0;cd backend

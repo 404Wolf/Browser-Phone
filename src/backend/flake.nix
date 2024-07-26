@@ -22,39 +22,22 @@
         };
       in {
         packages = {
-          android = pkgs.callPackage ./src/android {inherit pkgs;};
+          android-docker = pkgs.callPackage ./src/android/docker.nix {inherit pkgs;};
+          android-emulate = pkgs.callPackage ./src/android/emulator.nix {inherit pkgs;};
+          android-stream = pkgs.callPackage ./src/android/streamer.nix {inherit pkgs;};
           server = pkgs.callPackage ./server.nix {inherit pkgs;};
+          janus = pkgs.callPackage ./src/janus {inherit pkgs;};
         };
         devShells.default = pkgs.mkShell {
-          packages =
-            [
-              pkgs.libvpx
-              pkgs.bun
-              pkgs.janus-gateway
-              pkgs.ffmpeg_7-full
-            ]
-            ++ (with pkgs; [
-              glib
-              libconfig
-              libnice
-              jansson
-              boringssl
-              zlib
-              srtp
-              libuv
-              libmicrohttpd
-              curl
-              (libwebsockets.overrideAttrs (_: {
-                configureFlags = [
-                  "-DLWS_MAX_SMP=1"
-                  "-DLWS_WITHOUT_EXTENSIONS=0"
-                ];
-              }))
-              sofia_sip
-              libogg
-              libopus
-              usrsctp
-            ]);
+          packages = [
+            pkgs.bun
+            pkgs.vlc
+            pkgs.scrcpy
+            pkgs.janus-gateway
+            pkgs.ffmpeg_7-full
+            pkgs.android-tools
+            pkgs.linuxKernel.packages.linux_zen.v4l2loopback
+          ];
         };
       }
     );
