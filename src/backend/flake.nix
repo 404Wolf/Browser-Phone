@@ -32,11 +32,11 @@
           packages = [
             pkgs.bun
             pkgs.vlc
+            pkgs.tcpdump
             pkgs.scrcpy
             pkgs.janus-gateway
             pkgs.ffmpeg_7-full
             pkgs.android-tools
-            pkgs.linuxKernel.packages.linux_zen.v4l2loopback
           ];
         };
       }

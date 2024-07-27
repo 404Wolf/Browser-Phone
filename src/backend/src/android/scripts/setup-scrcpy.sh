@@ -6,7 +6,10 @@ sleep 2
 $ADB shell CLASSPATH=/data/local/tmp/scrcpy-server-v2.5.jar \
     app_process / com.genymobile.scrcpy.Server 2.5 \
     tunnel_forward=true \
-    audio=false control=false \
+    audio=false \
+    control=false \
     cleanup=false \
     raw_stream=true \
-    max_size=1920
+    max_size=1920 \
+    log_leve=debug \
+    video_encoding="h26444"

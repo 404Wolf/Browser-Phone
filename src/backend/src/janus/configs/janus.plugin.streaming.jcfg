@@ -10,7 +10,7 @@ rtp-sample: {
 	audiopt = 111
 	audiocodec = "opus"
 	videoport = 5004
-	videopt = 100
+	videopt = 96
 	videocodec = "vp8"
 	secret = "secret"
 }

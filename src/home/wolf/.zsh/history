@@ -1,7 +1,85 @@
-: 1721924067:0;scrycpy
-: 1721924072:0;scrcpy
-: 1721924074:0;cd backend
-: 1721924383:0;nix run .#janus
-: 1721924385:0;cd backend
-: 1721926341:0;scrcpy
-: 1721926342:0;cd backend
+: 1722027840:0;cd browser
+: 1722028027:0;ls
+: 1722028027:0;clear
+: 1722028028:0;ls
+: 1722028042:7;bash adb-go.sh
+: 1722028051:0;adb devices
+: 1722028052:41;bash adb-go.sh
+: 1722028115:0;adb forward tcp:1234 localabstract:scrcpyadb\
+
+: 1722028118:47;bash adb-go.sh
+: 1722028166:0;adb forward tcp:1234 localabstract:scrcpyadb\
+
+: 1722028194:172;bash adb-go.sh
+: 1722028367:0;adb forward tcp:1234 localabstract:scrcpyadb\
+
+: 1722028369:14;bash adb-go.sh
+: 1722028393:0;adb forward --list
+: 1722028444:0;history
+: 1722028463:0;adb forward "tcp:1234" "localabstract:scrcpyadb"\
+
+: 1722028466:4;bash adb-go.sh
+: 1722028472:0;adb devices
+: 1722028478:33;bash adb-go.sh
+: 1722028518:0;adb tcpip
+: 1722028530:0;adb tcpip R58T33601SF
+: 1722028535:0;adb tcpip 5555
+: 1722028545:0;adb forward "tcp:1234" "localabstract:scrcpyadb"\
+
+: 1722028548:6;bash adb-go.sh
+: 1722028560:0;adb kill-server
+: 1722028568:0;adb tcpip
+: 1722028576:3;adb tcpip 5555
+: 1722028587:0;adb connect
+: 1722028590:0;adb connect 5555
+: 1722028599:0;scrcpy --tcpip
+: 1722028605:0;adb devices
+: 1722028641:0;adb kill-server
+: 1722028656:3;adb tcpip 5555
+: 1722028673:1;adb connect 1234
+: 1722028679:0;adb forward "tcp:1234" "localabstract:scrcpyadb"\
+
+: 1722028682:0;adb devices
+: 1722028693:11;bash adb-go.sh
+: 1722028726:0;adb connect
+: 1722028728:0;adb connect 
+: 1722028731:0;adb connect 5555
+: 1722028738:12;bash adb-go.sh
+: 1722028754:0;adb kill-server
+: 1722028828:0;adb connect 
+: 1722028833:3;adb connect localhost:5555
+: 1722028850:5;bash adb-go.sh
+: 1722028870:0;adb kill-server
+: 1722028873:0;pkill adb
+: 1722028875:0;pgrep adb
+: 1722029048:148;bash adb-go.sh
+: 1722029199:0;adb forward "tcp:1234" "localabstract:scrcpyadb"\
+
+: 1722029233:1;bash adb-go.sh
+: 1722029246:0;adb forward "tcp:1235" "localabstract:scrcpyadb"\
+
+: 1722029280:0;adb --help
+: 1722029300:0;adb forward --remove-all
+: 1722029303:0;adb forward --list
+: 1722029714:391;scrcpy
+: 1722030110:0;adb forward --list
+: 1722031243:0;adb forward "tcp:1235" "localabstract:scrcpyadb"\
+
+: 1722031270:0;adb forward --delete-all
+: 1722031274:0;adb forward --remove-all
+: 1722031278:0;adb forward --list
+: 1722031279:0;adb
+: 1722031353:0;adb forward "tcp:1235" "localabstract:scrcpyadb"\
+
+: 1722031357:0;adb forward --delete-all
+: 1722031361:0;adb forward --remove-all
+: 1722031400:0;adb forward tcp:1234 localabstract:scrcpy
+: 1722031437:0;cd src
+: 1722031438:0;cd android
+: 1722031453:0;adb push scrcpy-server-v2.5.jar /data/local/tmp/scrcpy-server-v2.5.jar
+: 1722031503:0;...
+: 1722031507:0;cd backend
+: 1722031576:0;cd src
+: 1722034236:0;cd ../
+: 1722034237:0;ls
+: 1722034239:0;cd browser

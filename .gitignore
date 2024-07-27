@@ -148,3 +148,4 @@ dist
 
 src/backend/.direnv
 src/backend/home/wolf/.zsh
+src/backend/.direnv
