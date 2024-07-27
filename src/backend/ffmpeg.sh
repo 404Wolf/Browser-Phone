@@ -7,11 +7,18 @@
     #     -sdp_file video.sdp \
     #     rtp://localhost:5004
 
-ffmpeg -re -f h264 -i "tcp://127.0.0.1:1234" \
+# ffmpeg -re -f h264 -i "tcp://127.0.0.1:1234" \
+    #     -an \
+    #     -c:v copy \
+    #     -f rtp \
+    #     -loglevel verbose \
+    #     -sdp_file video.sdp \
+    #     rtp://localhost:5004
+
+ffmpeg -i "tcp://127.0.0.1:1234" \
     -an \
-    -c:v libvpx \
+    -c:v copy \
     -f rtp \
-    -payload_type 96 \
     -loglevel verbose \
     -sdp_file video.sdp \
     rtp://localhost:5004

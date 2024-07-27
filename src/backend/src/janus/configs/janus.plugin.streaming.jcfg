@@ -11,7 +11,9 @@ rtp-sample: {
 	audiocodec = "opus"
 	videoport = 5004
 	videopt = 96
-	videocodec = "vp8"
+	videocodec = "h264"
+  h264sps="Z0KAKtoDYDxpqAgwCDxYuoA=,aM4NiAA="
+  videofmtp="fmtp:96 packetization-mode=1; sprop-parameter-sets=Z0KAKtoDYDxpqAgwCDxYuoA=,aM4NiAA=; profile-level-id=42802A"
 	secret = "secret"
 }
 
