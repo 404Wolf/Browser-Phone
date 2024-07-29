@@ -15,7 +15,7 @@ general: {
 	#log_to_stdout = false					# Whether the Janus output should be written
 											# to stdout or not (default=true)
 	#log_to_file = "/path/to/janus.log"		# Whether to use a log file or not
-	debug_level = 5							# Debug/logging level, valid values are 0-7
+	debug_level = 7							# Debug/logging level, valid values are 0-7
 	#debug_timestamps = true				# Whether to show a timestamp for each log line
 	#debug_colors = false					# Whether colors should be disabled in the log
 	#debug_locks = true						# Whether to enable debugging of locks (very verbose!)
@@ -227,10 +227,10 @@ certificates: {
 media: {
 	#ipv6 = true
 	#ipv6_linklocal = true
-	#min_nack_queue = 500
+	min_nack_queue = 1200
 	rtp_port_range = "20000-40000"
 	dtls_mtu = 1200
-	no_media_timer = 1
+	no_media_timer = 2
 	slowlink_threshold = 4
 	twcc_period = 100
 	dtls_timeout = 500
@@ -244,7 +244,7 @@ media: {
 	# anyway (which is the main reason why video retransmissions are typically
 	# required). While this optimization is known to work fine in most cases,
 	# it can backfire in some edge cases, and so is disabled by default.
-	#nack_optimizations = true
+	nack_optimizations = true
 
 	# If you need DSCP packet marking and prioritization, you can configure
 	# the 'dscp' property to a specific values, and Janus will try to
@@ -254,7 +254,7 @@ media: {
 	# we can only use one. You can refer to this document for more info:
 	# https://tools.ietf.org/html/draft-ietf-tsvwg-rtcweb-qos-18#page-6
 	# That said, DON'T TOUCH THIS IF YOU DON'T KNOW WHAT IT MEANS!
-	#dscp = 46
+	dscp = 46
 }
 
 # NAT-related stuff: specifically, you can configure the STUN/TURN

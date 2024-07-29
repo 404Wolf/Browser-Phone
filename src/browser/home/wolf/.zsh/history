@@ -12,3 +12,11 @@
 : 1722034246:0;ls
 : 1722034253:0;pwd | copy
 : 1722039634:0;npm run dev
+: 1722284191:0;direnv allow
+: 1722284193:0;bun run dev
+: 1722284197:0;bun
+: 1722284200:0;nix-shell -p bun
+: 1722284204:0;bun run dev
+: 1722284207:0;bun install
+: 1722284208:0;bun run dev
+: 1722287005:0;nv

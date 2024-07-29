@@ -83,3 +83,12 @@
 : 1722034236:0;cd ../
 : 1722034237:0;ls
 : 1722034239:0;cd browser
+: 1722281876:0;cd backend
+: 1722282225:0;cd src/backend
+: 1722282228:16;vlc video.sdp
+: 1722282249:11;vlc --demux h264 video.sdp
+: 1722282262:36;vlc video.sdp
+: 1722282300:102;vlc --network-caching=50000 video.sdp 
+: 1722282541:0;cat video.sdp
+: 1722284186:0;cd ..
+: 1722284188:0;cd browser

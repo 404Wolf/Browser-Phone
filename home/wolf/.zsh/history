@@ -16,3 +16,25 @@
 : 1722037972:0;ls
 : 1722037974:0;cd src/backend
 : 1722054498:0;nv
+: 1722281655:0;git clone https://github.com/404Wolf/Browser-Phone/tree/main
+: 1722281659:0;ls
+: 1722281661:0;git clone /tmp/tmp.Db4FMNsq2i\
+
+: 1722281666:0;git clone https://github.com/404Wolf/Browser-Phone/tree/main
+: 1722281668:1;git clone https://github.com/404Wolf/Browser-Phone/
+: 1722281671:0;cd Browser-Phone
+: 1722281671:0;clear
+: 1722281673:0;direnv allow
+: 1722281675:0;tmns test
+: 1722281683:0;nv
+: 1722281686:0;ls
+: 1722281687:0;cd backend
+: 1722281690:0;cd src/backend
+: 1722281694:0;ls
+: 1722281697:0;cd src/backend
+: 1722281870:0;nix run .#janus
+: 1722281873:0;gaa
+: 1722281873:0;ls
+: 1722281874:0;cd src
+: 1722287000:0;cd brow
+: 1722287004:0;cd src/browser

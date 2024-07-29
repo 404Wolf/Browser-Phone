@@ -14,23 +14,24 @@
     #     -loglevel verbose \
     #     -sdp_file video.sdp \
     #     rtp://localhost:5004
-
-ffmpeg -i "tcp://127.0.0.1:1234" \
+# TEST
+ffmpeg -analyzeduration 100M -probesize 50M \
+    -fflags +genpts -i "tcp://127.0.0.1:1234" \
     -an \
     -c:v copy \
     -f rtp \
     -loglevel verbose \
     -sdp_file video.sdp \
-    rtp://localhost:5004
+    rtp://127.0.0.1:5004
 # ffmpeg -re -f h264 -i "tcp://127.0.0.1:1234" \
-    #     -an \
-    #     -preset ultrafast \
-    #     -tune zerolatency \
-    #     -c:v libvpx -b:v 1M \
-    #     -f rtp \
-    #     -loglevel verbose \
-    #     -sdp_file video.sdp \
-    #     rtp://localhost:5004
+#         -an \
+#         -c:v libvpx -b:v 1M \
+#         -f rtp \
+#         -loglevel verbose \
+#         -sdp_file video.sdp \
+#         rtp://localhost:5004
+        # -preset ultrafast \
+        # -tune zerolatency \
 
 # -f rtp \
     # -sdp_file video.sdp \
