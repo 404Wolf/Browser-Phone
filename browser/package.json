@@ -1,0 +1,25 @@
+{
+  "name": "webrtc-android",
+  "module": "index.ts",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "scripts": {
+    "build": "bunx vite build",
+    "serve": "bunx vite preview",
+    "dev": "bunx vite"
+  },
+  "type": "module",
+  "dependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "adapterjs": "^0.15.5",
+    "janus-gateway": "^1.2.3-1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "vite": "^5.3.4"
+  }
+}

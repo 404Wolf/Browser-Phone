@@ -1,0 +1,5 @@
+$JANUS \
+    -P "$JANUS_INSTALL" \
+    -F "$JANUS_CONFIG_DIR" \
+    -C "$JANUS_CONFIG"
+
