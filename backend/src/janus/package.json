@@ -1,0 +1,19 @@
+{
+  "name": "janus",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run ./index.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/yargs": "^17.0.32"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "yargs": "^17.7.2"
+  }
+}
+
