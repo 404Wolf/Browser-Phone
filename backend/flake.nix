@@ -22,11 +22,12 @@
         };
       in {
         packages = {
-          android-docker = pkgs.callPackage ./src/android/docker.nix {inherit pkgs;};
-          android-emulate = pkgs.callPackage ./src/android/emulator.nix {inherit pkgs;};
-          android-stream = pkgs.callPackage ./src/android/streamer.nix {inherit pkgs;};
-          server = pkgs.callPackage ./server.nix {inherit pkgs;};
-          janus = pkgs.callPackage ./src/janus {inherit pkgs;};
+          default = pkgs.callPackage ./server.nix {inherit pkgs;};
+          build-android-emulator = args:
+            import ./src/android/emulator.nix {
+              args = builtins.fromJSON args;
+              inherit pkgs;
+            };
         };
         devShells.default = pkgs.mkShell {
           packages = [
@@ -37,6 +38,7 @@
             pkgs.janus-gateway
             pkgs.ffmpeg_7-full
             pkgs.android-tools
+            pkgs.android-studio
           ];
         };
       }

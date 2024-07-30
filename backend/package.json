@@ -1,20 +1,22 @@
 {
   "name": "webrtc-android",
   "module": "index.ts",
-  "type": "module",
+  "dependencies": {
+    "@types/cookie": "^0.6.0",
+    "adb-ts": "^6.0.0",
+    "cookie": "^0.6.0",
+    "node-ffmpeg": "^0.0.3"
+  },
+  "peerDependencies": {
+    "typescript": "^5.5.3"
+  },
   "scripts": {
     "dev": "bun run src/index.ts",
     "build": "bun run ./build.ts",
     "start": "bun dist/index.js"
   },
+  "type": "module",
   "devDependencies": {
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  },
-  "dependencies": {
-    "@types/cookie": "^0.6.0",
-    "cookie": "^0.6.0"
+    "@types/bun": "^1.1.6"
   }
 }

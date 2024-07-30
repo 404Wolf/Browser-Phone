@@ -2,8 +2,8 @@ rtp-sample: {
   enable = true
 	type = "rtp"
 	id = 1
-	description = "Opus/VP8 live stream coming from external source"
-	metadata = "You can use this metadata section to put any info you want!"
+	description = "Android emulator stream"
+	metadata = ""
 	audio = true
 	video = true
 	audioport = 5002
@@ -13,7 +13,9 @@ rtp-sample: {
 	videopt = 96
 	videocodec = "h264"
   h264sps = "Z0KAKtoDYDxpqAgwCDxYuoA=,aM4NiAA="
-  videofmtp = "profile-level-id=42802A;sprop-parameter-sets=Z0KAKtoDYDxpqAgwCDxYuoA=,aM4NiEAAABBoO5gSAAEyUAA=;"
+  videofmtp = "packetization-mode=1;profile-level-id=42802A;sprop-parameter-sets=Z0KAKtoDYDxpqAgwCDxYuoA=,aM4NiAA=;"
+  videobufferkf = true
+  video_simulcast = false
 	secret = "secret"
 }
 

@@ -227,10 +227,10 @@ certificates: {
 media: {
 	#ipv6 = true
 	#ipv6_linklocal = true
-	#min_nack_queue = 500
+	min_nack_queue = 1200
 	rtp_port_range = "20000-40000"
-	dtls_mtu = 1200
-	no_media_timer = 1
+	dtls_mtu = 1500
+	no_media_timer = 2
 	slowlink_threshold = 4
 	twcc_period = 100
 	dtls_timeout = 500
@@ -244,7 +244,7 @@ media: {
 	# anyway (which is the main reason why video retransmissions are typically
 	# required). While this optimization is known to work fine in most cases,
 	# it can backfire in some edge cases, and so is disabled by default.
-	#nack_optimizations = true
+	nack_optimizations = true
 
 	# If you need DSCP packet marking and prioritization, you can configure
 	# the 'dscp' property to a specific values, and Janus will try to
@@ -254,7 +254,7 @@ media: {
 	# we can only use one. You can refer to this document for more info:
 	# https://tools.ietf.org/html/draft-ietf-tsvwg-rtcweb-qos-18#page-6
 	# That said, DON'T TOUCH THIS IF YOU DON'T KNOW WHAT IT MEANS!
-	#dscp = 46
+	dscp = 46
 }
 
 # NAT-related stuff: specifically, you can configure the STUN/TURN
