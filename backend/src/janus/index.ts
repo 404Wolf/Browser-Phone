@@ -1,6 +1,9 @@
 import { $ } from "bun";
 
-async function startJanus(configDirPath: string, baseConfigPath: string) {
+export default async function startJanus(
+  configDirPath: string,
+  baseConfigPath: string,
+) {
   const janusRoot = (await $`which janus`.text()).replace("/bin/janus", "");
   return Bun.spawn(
     [
@@ -13,9 +16,8 @@ async function startJanus(configDirPath: string, baseConfigPath: string) {
       baseConfigPath,
     ],
     {
+      cwd: "janus",
       stdout: "inherit",
     },
   );
 }
-
-await startJanus("configs", "janus.jcfg");

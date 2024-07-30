@@ -23,6 +23,7 @@
       in {
         packages = {
           default = pkgs.callPackage ./server.nix {inherit pkgs;};
+          run-janus-gateway = pkgs.callPackage ./src/janus {inherit pkgs;};
           build-android-emulator = args:
             import ./src/android/emulator.nix {
               args = builtins.fromJSON args;
