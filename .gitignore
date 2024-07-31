@@ -149,6 +149,8 @@ dist
 src/backend/.direnv
 src/backend/home/wolf/.zsh
 src/backend/.direnv
+.direnv
+home
 home/wolf/.zsh
 browser/home/wolf/.zsh
 src/browser/home/wolf/.zsh
