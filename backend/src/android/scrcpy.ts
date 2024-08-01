@@ -15,9 +15,9 @@ export async function startScrcpy(deviceId: string, scrcpyServerPath: string) {
     cleanup=false \
     raw_stream=true \
     max_size=1920 \
-    video_bit_rate=10000000 \
-    video_codec_options=bitrate-mode=1,latency=0 \
-    max_fps=60`;
+    video_bit_rate=30000000 \
+    video_codec_options=bitrate-mode=4,latency=0 \
+    max_fps=30`;
   console.log("Started running scrcpy");
 }
 // ,repeat-previous-frame-after:long=1000000 
