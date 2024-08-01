@@ -6,15 +6,15 @@ pkgs.stdenv.mkDerivation {
   propagatedBuildInputs = [
     pkgs.ffmpeg_7-headless
     pkgs.janus-gateway
+    pkgs.bun
   ];
   buildPhase = ''
     bun install
-    bun run build
+    env PATH="" ${pkgs.bun}/bin/bun run build
   '';
   installPhase = ''
-    ${pkgs.tree}/bin/tree $src
-      mkdir -p $out/bin
-      cp $src/dist/index.js $out/bin/index.js
+    mkdir -p $out/bin
+    cp build/index.js $out/bin/index.js
   '';
   outputHashAlgo = "sha256";
   outputHashMode = "recursive";

@@ -7,7 +7,7 @@ export default async function startJanus(
   const janusRoot = (await $`which janus`.text()).replace("/bin/janus", "");
   return Bun.spawn(
     [
-      `${janusRoot}/bin/janus`,
+      "janus",
       "-P",
       `${janusRoot}/lib/janus/plugins`,
       "-F",
@@ -16,7 +16,7 @@ export default async function startJanus(
       baseConfigPath,
     ],
     {
-      cwd: "janus",
+      cwd: "src/janus",
       stdout: "inherit",
     },
   );

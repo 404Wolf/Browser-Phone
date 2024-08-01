@@ -192,15 +192,7 @@ $(document).ready(function () {
                 }
               },
               onremotetrack: function (track, mid, on, metadata) {
-                Janus.debug(
-                  "Remote track (mid=" +
-                    mid +
-                    ") " +
-                    (on ? "added" : "removed") +
-                    (metadata ? " (" + metadata.reason + ") " : "") +
-                    ":",
-                  track,
-                );
+                Janus.debug( "Remote track (mid=" + mid + ") " + (on ? "added" : "removed") + (metadata ? " (" + metadata.reason + ") " : "") + ":", track,);
                 let mstreamId = "mstream" + mid;
                 if (
                   streamsList[selectedStream] &&

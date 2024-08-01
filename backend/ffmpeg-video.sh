@@ -1,0 +1,12 @@
+ffmpeg -re \
+    -i tcp://localhost:1234 \
+    -f h264 \
+    -an \
+    -c:v copy \
+    -loglevel verbose \
+    -flags low_delay \
+    -fflags nobuffer \
+    -probesize 32 \
+    -analyzeduration 0 \
+    -f rtp rtp://localhost:5004 \
+    -sdp_file video.sdp

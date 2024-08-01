@@ -5,8 +5,8 @@
 # and, if needed, shared apisecret and/or token authentication mechanism
 # between application(s) and Janus.
 general: {
-	configs_folder = "./src/janus/configs"			# Configuration files folder
-	plugins_folder = "/nix/store/61xf7hqkj2i6cx1napqniwd5lq63rz53-janus-gateway-1.2.3"			# Plugins folder
+	configs_folder = ""			# Configuration files folder
+	plugins_folder = ""			# Plugins folder
 	# transports_folder = "@transportdir@"	# Transports folder
 	events_folder = "@eventdir@"			# Event handlers folder
 	loggers_folder = "@loggerdir@"			# External loggers folder

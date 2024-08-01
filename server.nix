@@ -1,15 +1,20 @@
-{ pkgs }:
+{pkgs}:
 pkgs.stdenv.mkDerivation {
-  name = "Browser Side for WebRTC Android";
+  name = "Server for WebRTC Android";
   src = ./.;
-  buildInputs = [ pkgs.bun ];
+  buildInputs = [pkgs.bun];
+  propagatedBuildInputs = [
+    pkgs.ffmpeg_7-headless
+    pkgs.janus-gateway
+    pkgs.bun
+  ];
   buildPhase = ''
     bun install
-    bun run build
+    env PATH="" ${pkgs.bun}/bin/bun run build
   '';
   installPhase = ''
     mkdir -p $out/bin
-    cp -r ./dist/* $out/bin
+    cp build/index.js $out/bin/index.js
   '';
   outputHashAlgo = "sha256";
   outputHashMode = "recursive";
