@@ -1,6 +1,6 @@
 import { $ } from "bun";
 
-export async function startScrcpy(deviceId: string, scrcpyServerPath: string) {
+export async function startScrcpy(scrcpyServerPath: string) {
   await $`adb push ${scrcpyServerPath} /data/local/tmp/scrcpy-server.jar`;
   console.log("Pushed scrcpy server to device");
 
@@ -20,6 +20,4 @@ export async function startScrcpy(deviceId: string, scrcpyServerPath: string) {
     max_fps=30`;
   console.log("Started running scrcpy");
 }
-// ,repeat-previous-frame-after:long=1000000 
-// ,i-frame-interval=1,keyint=20,bitrate-mode=2
-// },repeat-previous-frame-after=10
+
