@@ -27,8 +27,7 @@ export default function Android({ ip, apiSecret }: AndroidProps) {
       }
     };
 
-    setupStream(); // Initial setup
-
+    setupStream();
     const checkStreamHealth = () => {
       if (videoPlayer.current && (!videoPlayer.current.srcObject || mediaStreamTrack.readyState !== "live")) {
         console.log("Stream not healthy, attempting to reconnect...");
@@ -36,7 +35,7 @@ export default function Android({ ip, apiSecret }: AndroidProps) {
       }
     };
 
-    const intervalId = setInterval(checkStreamHealth, 5000); // Check every 5 seconds
+    const intervalId = setInterval(checkStreamHealth, 1000);
 
     return () => {
       clearInterval(intervalId);

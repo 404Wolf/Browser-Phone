@@ -159,3 +159,4 @@ backend/.direnv
 scrcpy/src/.settings
 scrcpy/src/server/.settings
 scrcpy/src/server/.settings/org.eclipse.buildship.core.prefs
+home/wolf/.zsh

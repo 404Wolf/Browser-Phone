@@ -6,7 +6,9 @@ export default async function startAndroid(scrcpyServerPath: string) {
   const devices = await client.listDevices();
   if (devices.length === 0) throw new Error("No devices found");
   const deviceId = devices[0].id;
-  client.waitBootComplete(deviceId);
+  await client.waitBootComplete(deviceId);
 
   return startScrcpy(scrcpyServerPath);
 }
+
+await startAndroid("./scrcpy.jar")

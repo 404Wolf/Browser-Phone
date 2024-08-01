@@ -42,3 +42,55 @@
 : 1722213384:0;bun run dev
 : 1722213387:0;cd ..
 : 1722213389:0;cd browser
+: 1722493372:96;bun run dev
+: 1722493470:0;bun run build
+: 1722493472:0;bun run run
+: 1722493568:2;bun run start
+: 1722493572:0;bun run build
+: 1722493573:68;bun run start
+: 1722527091:0;pkill janus
+: 1722527092:0;clear
+: 1722527096:5;nix run .#android
+: 1722527105:20;lazygit
+: 1722527229:0;nix run .#android
+: 1722527233:0;nix build .#android
+: 1722527234:0;ls
+: 1722527241:2;podman load < result
+: 1722527258:2;nix build .#android
+: 1722527261:1;podman load < result
+: 1722527269:0;podman run localhost/hello-docker:latest
+: 1722527480:0;cd ..
+: 1722527481:0;cd scrcpy
+: 1722528131:0;tmns browser-phone
+: 1722528136:0;v
+: 1722528193:0;nvfg
+: 1722528194:0;nv
+: 1722528206:0;cd backend/android
+: 1722528851:0;cd android
+: 1722528852:0;ls
+: 1722528855:0;cd backend/android
+: 1722529526:0;ls
+: 1722529532:0;gcc -m "Start dockerzing"
+: 1722529549:0;ga
+: 1722529552:0;lazygit
+: 1722532064:0;podman container ls
+: 1722532074:0;podman container kill db1840046f44
+: 1722532079:0;podman container ls
+: 1722532690:0;nix build
+: 1722532693:0;nix build .#android
+: 1722532890:0;cd abckend
+: 1722532895:0;cd backend/android
+: 1722536345:0;podman container ls
+: 1722536354:0;podman container remove 17a3acc16720
+: 1722536358:0;podman container rm 17a3acc16720
+: 1722536365:0;podman container kill 17a3acc16720
+: 1722536391:0;nix-top
+: 1722536394:0;nix-shell -p nix-top
+: 1722536438:0;alias ,="nix-shell -p "
+: 1722536441:0;, nix-top
+: 1722537485:0;z doc
+: 1722537826:0;fg
+: 1722537832:0;nix build .#android --builders 'ssh://149.28.36.76'\
+
+: 1722537840:0;cd src/android
+: 1722537841:0;cd backend

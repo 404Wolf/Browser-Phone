@@ -4,13 +4,15 @@
   inputs = {
     flake-utils.url = "github:numtide/flake-utils";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    android-tools.url = "github:tadfisher/android-nixpkgs";
   };
 
   outputs = {
     self,
     nixpkgs,
     flake-utils,
-  }:
+    ...
+  } @ inputs:
     flake-utils.lib.eachDefaultSystem (
       system: let
         pkgs = import nixpkgs {
@@ -23,24 +25,11 @@
       in {
         packages = {
           default = pkgs.callPackage ./server.nix {inherit pkgs;};
-          run-janus-gateway = pkgs.callPackage ./src/janus {inherit pkgs;};
-          build-android-emulator = args:
-            import ./src/android/emulator.nix {
-              args = builtins.fromJSON args;
-              inherit pkgs;
-            };
-        };
-        devShells.default = pkgs.mkShell {
-          packages = [
-            pkgs.bun
-            pkgs.vlc
-            pkgs.tcpdump
-            pkgs.scrcpy
-            pkgs.janus-gateway
-            pkgs.ffmpeg_7-full
-            pkgs.android-tools
-            pkgs.android-studio
-          ];
+          janus = pkgs.callPackage ./janus {inherit pkgs;};
+          android = pkgs.callPackage ./android {
+            inherit pkgs;
+            android-tools = inputs.android-tools;
+          };
         };
       }
     );
