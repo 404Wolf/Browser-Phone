@@ -10,3 +10,4 @@ pkgs.writeShellScriptBin "android-emulator" ''
 
   ${builtins.readFile ./scripts/wait-for-boot.sh}
 ''
+
