@@ -22,3 +22,5 @@ export default async function startFfmpeg(
     })
     .run();
 }
+
+startFfmpeg("localhost:1234", "localhost:5004")

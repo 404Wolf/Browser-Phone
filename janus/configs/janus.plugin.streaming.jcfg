@@ -14,8 +14,8 @@ rtp-sample: {
 	videocodec = "h264"
   videosimulcast = false
   videobufferkf = true
-  h264sps = "Z0KAKtoDYDxpqAgwCDxYuoA=,aM4NiAA="
-  videofmtp = "packetization-mode=1;sprop-parameter-sets=Z0KAKtoDYDxpqAgwCDxYuoA=,aM4NiAA=;profile-level-id=42802A;"
+  h264sps = "Z0LAKo1oDYDxpCAgICDwiEag,aM4BqDXIAA=="
+  videofmtp = "packetization-mode=1;Z0LAKo1oDYDxpCAgICDwiEag,aM4BqDXIAA==;profile-level-id=42C02A;"
 	secret = "secret"
 }
 

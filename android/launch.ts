@@ -7,4 +7,4 @@ if (devices.length === 0) throw new Error("No devices found");
 const deviceId = devices[0].id;
 await client.waitBootComplete(deviceId);
 
-await startScrcpy("./scrcpy.jar");
+await startScrcpy("./scrcpy-server-v2.5.jar");
